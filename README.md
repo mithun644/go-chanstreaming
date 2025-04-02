@@ -1,4 +1,4 @@
-# chanstreaming [README.md](pkg/chanstreaming/README.md)
+# core chanstreaming package [README.md](pkg/chanstreaming/README.md)
 
 see also
 
