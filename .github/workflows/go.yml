@@ -20,6 +20,6 @@ jobs:
       with:
         go-version: '1.24'
     - name: Build
-      run: go build -a -v ./pkg/chanstreaming
+      run: (cd ./pkg/chanstreaming && go build -a -v .)
     - name: Test
-      run: go test -v ./pkg/chanstreaming
+      run: (cd ./pkg/chanstreaming && go test -a -v .)

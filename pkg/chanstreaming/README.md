@@ -1,6 +1,6 @@
 # chanstreaming
 
-## A deconstructive exercise in concurrent programming with golang channels for fun and profit
+## A set of functions to command channel-driven workflows in golang
 
 Golang's channel is a very generic construct that allows to build a variety of parallel processing pipelines with ease, while keeping things modular, type-safe and expressive.
 
@@ -27,7 +27,7 @@ Here you'll find:
 - `Mapped(fn)` and `Apply(fn)` for simple transformations and logging
 - `FromSlice(slice)` and `ToSlice(source)` for converting channels and slices and more.
 
-It relies heavily on Golang's generics for type safety, so this is not back-portable to golang pre-1.18.  
+It relies heavily on Golang's generics for type safety, so this is not back-portable to golang pre-1.18.
 
 Some of the functions implement patterns seen at https://go.dev/blog/pipelines, but this time taking advantage of generics to build a versatile toolkit.
 
@@ -58,18 +58,15 @@ Many become one. When all sources are exhausted, the system closes itself—**no
 Particularly useful for **aggregating multiple event sources, log streams, or external APIs into a unified pipeline**.
 
 ### There's go-streams, why another one?
-- The `go-streams` lib implements Java Streams API and many many similar flow/stream building frameworks and does it objective way with Fluent-like style.
-- The `chanstreaming` lib addresses roughly same class of data/control streaming scenarios, but advocates for the re-use the `<-chan T` primitive as the main object of the API surface.
+- The `go-streams` lib implements idiomatical, Java-inspired Streams API and many similar flow/stream building frameworks seen in other languages. It does it an objective way, exposing the Fluent-style interface to give you a concise workflow builder.
+- The `chanstreaming` lib addresses roughly same class of data/control streaming scenarios, but advocates for the re-use the `<-chan T` primitive as the main object of the API surface, allowing to decouple, extend, test & rearrange the workflows in safe way.
 - The two are very much compatible as they can be used together in same project.
-- For production use, the real difference would be the style of the execution. So for precisely-timed workflows I would personally go with go-streams - there are no tests that do the strong tick-level precision assertions against the runtimes.
-
-### The costs paid
-- The `chanstreaming` lib is more verbose and less expressive than `go-streams` and similar libs
+- For production use, the real difference would be the style of the execution, not the modelling.   
+  Depending on the task and background one could choose to describe complex precisely-timed workflows with go-streams first, or inline the timed-concurrency-critical piece in its own code space.
+- There are no generic methods in golang, so the `chanstreaming` lib does not try to implement them by hacking around `reflect` and `any`. We simply expose higher order functions in the API instead.
 
 ### What's missing?
 - [ ] Examples:
   - [ ] Basic system & IO demos (FromCSV(filename), FromShell(command, args...) (to produce a stream of stdout+stderr+eof+exitCode messages)
   - [ ] Integration demos (shell, kafka, pgsql, csv, pq, rpc)
   - [ ] More tests
-
-
