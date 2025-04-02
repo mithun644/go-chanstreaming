@@ -60,13 +60,12 @@ Particularly useful for **aggregating multiple event sources, log streams, or ex
 ## There's go-streams, why another one?
 - The `go-streams` lib implements idiomatical, Java-inspired Streams API and/or similar data flow building frameworks seen in other languages. This is done traditionally in objective way, exposing the Fluent-style interface to give you a concise workflow builder.
 - The `chanstreaming` lib addresses roughly same class of data/control streaming scenarios, but advocates for the re-use the `<-chan T` primitive as the main object of the module's API surface. Decouple, extend, test & rearrange the workflows in type-safe way.
+- For production use, the real difference would be the style of the execution. Depending on the task and background one could choose to describe complex precisely-timed workflows with go-streams first, or inline the timed-concurrency-critical piece in its own code space.
 - The two are very much compatible as they can be used together in same project.
-- For production use, the real difference would be the style of the execution, not the modelling.   
-  Depending on the task and background one could choose to describe complex precisely-timed workflows with go-streams first, or inline the timed-concurrency-critical piece in its own code space.
 - There are no generic methods in golang, so the `chanstreaming` lib does not try to implement them by hacking around `reflect` and `any`. We simply expose higher order functions in the API instead.
 
 ### What's missing?
 - [ ] Examples:
-  - [ ] Basic system & IO demos (FromCSV(filename), FromShell(command, args...) (to produce a stream of stdout+stderr+eof+exitCode messages)
-  - [ ] Integration demos (shell, kafka, pgsql, csv, pq, rpc)
+  - [ ] Basic system & IO (FromCSV(filename), FromShell(command, args...) (to produce a stream of stdout+stderr+eof+exitCode messages)
+  - [ ] Integration demos (shell, kafka, sql, rpc)
   - [ ] More tests
