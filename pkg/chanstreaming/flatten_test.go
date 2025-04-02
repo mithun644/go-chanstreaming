@@ -1,7 +1,7 @@
 package chanstreaming_test
 
 import (
-	ch "github.com/diemenator/chanstreaming"
+	ch "github.com/diemenator/go-chancontrolledstreaming"
 	"slices"
 	"testing"
 )
