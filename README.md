@@ -1,6 +1,6 @@
-# core chanstreaming package [README.md](pkg/chanstreaming/README.md)
+[core chanstreaming package readme](pkg/chanstreaming/README.md)
 
-see also
+see also:
 
 https://github.com/golang-design/go2generics/tree/main/chans
 
