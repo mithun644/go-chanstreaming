@@ -57,8 +57,8 @@ Designed for **sharding workloads, distributing traffic, and parallelizing proce
 Many become one. When all sources are exhausted, the system closes itself—**no watchers, no counters, no waste**.  
 Particularly useful for **aggregating multiple event sources, log streams, or external APIs into a unified pipeline**.
 
-### There's go-streams, why another one?
-- The `go-streams` lib implements idiomatical, Java-inspired Streams API and many similar flow/stream building frameworks seen in other languages. It does it an objective way, exposing the Fluent-style interface to give you a concise workflow builder.
+## There's go-streams, why another one?
+- The `go-streams` lib implements idiomatical, Java-inspired Streams API and many similar flow/stream building frameworks seen in other languages. This is done in objective way, exposing the Fluent-style interface to give you a concise workflow builder.
 - The `chanstreaming` lib addresses roughly same class of data/control streaming scenarios, but advocates for the re-use the `<-chan T` primitive as the main object of the API surface, allowing to decouple, extend, test & rearrange the workflows in safe way.
 - The two are very much compatible as they can be used together in same project.
 - For production use, the real difference would be the style of the execution, not the modelling.   
